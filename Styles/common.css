@@ -58,7 +58,7 @@ p {
 }
 
 .header {
-    margin: 10px 0;
+    margin: 15px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -74,7 +74,7 @@ p {
     position: relative;
     margin: 0 5px;
     padding: 8px;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--dandelion-color);
     transition: color 0.3s ease;
 }
@@ -93,4 +93,20 @@ p {
 .header-a:hover::after {
     width: calc(100% - 16px);
     left: 8px;
+}
+
+.hire-me {
+    background: linear-gradient(145deg, #f25f5c, #141C0C);
+    color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hire-me:hover {
+    transform: scale(1.05);
+    font-size: 21px;
 }
