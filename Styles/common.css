@@ -358,3 +358,7 @@ p {
 .aboutme-text {
     font-weight: 700;
 }
+.calendar-icon{
+    height: 15px;
+    width: 15px;
+}
