@@ -298,6 +298,7 @@ p {
 }
 
 .aboutme-content {
+    margin: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,6 +307,10 @@ p {
     padding: 8px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+}
+
+.aboutme-academic {
+    width: 40%;
 }
 
 .aboutme-content:hover {
@@ -324,7 +329,32 @@ p {
     transform: scale(1.3);
 }
 
+.aboutme-content-text {
+    flex-grow: 1;
+}
+
 .aboutme-content-header {
     font-size: 20px;
     color: var(--white-color);
+    margin: 5px 0;
+}
+
+.aboutme-year,
+.aboutme-degree,
+.aboutme-text,
+.aboutme-address {
+    color: var(--platinum-color);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.aboutme-year,
+.aboutme-degree,
+.aboutme-address {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.aboutme-text {
+    font-weight: 700;
 }
