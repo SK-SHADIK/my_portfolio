@@ -293,7 +293,7 @@ p {
 .aboutme-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     gap: 20px;
 }
 
@@ -358,7 +358,19 @@ p {
 .aboutme-text {
     font-weight: 700;
 }
-.calendar-icon{
+
+.calendar-icon {
     height: 15px;
     width: 15px;
+}
+
+.aboutme-academic-header {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.aboutme-academic-img {
+    height: 35px;
+    width: 35px;
 }
