@@ -1,3 +1,4 @@
+/* Root variables for color scheme */
 :root {
     --white-color: #fff;
     --platinum-color: #e6e5e5;
@@ -11,6 +12,7 @@
     --green-sheen-color: #70c1b3;
 }
 
+/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,50 +20,28 @@
     list-style: none;
 }
 
+/* Body styles */
 body {
     background-color: var(--chinese-black-color);
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--white-color);
-}
-
-h2 {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--white-color);
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--white-color);
-}
-
-h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--white-color);
-}
-
-h5 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--white-color);
-}
-
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-size: 14px;
     font-weight: 700;
     color: var(--white-color);
 }
 
+/* Paragraph styles */
 p {
     font-size: 12px;
 }
 
+/* Header styles */
 .header {
     margin: 0;
     padding: 15px 0;
@@ -72,28 +52,33 @@ p {
     height: 30px;
 }
 
+/* Header scroll effect */
 .header-scroll {
     background-color: var(--chinese-black-color);
 }
 
+/* Header container styles */
 .header-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* Logo styles */
 .logo {
     font-size: 26px;
     font-weight: 700;
     color: var(--white-color);
 }
 
+/* Header navigation list styles */
 .header-ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* Header navigation link styles */
 .header-a {
     position: relative;
     margin: 0 5px;
@@ -103,6 +88,7 @@ p {
     transition: color 0.3s ease;
 }
 
+/* Header navigation link hover effect */
 .header-a::after {
     content: '';
     position: absolute;
@@ -114,11 +100,13 @@ p {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
+/* Header navigation link hover effect */
 .header-a:hover::after {
     width: calc(100% - 16px);
     left: 8px;
 }
 
+/* "Hire Me" button styles */
 .hire-me {
     background: linear-gradient(145deg, #f25f5c, #141C0C);
     color: var(--white-color);
@@ -130,28 +118,33 @@ p {
     transition: transform 0.3s ease;
 }
 
+/* "Hire Me" button hover effect */
 .hire-me:hover {
     transform: scale(1.05);
     font-size: 21px;
 }
 
+/* Main section styles */
 .main-section {
     margin: 70px 0 20px 0;
     padding: 20px;
 }
 
+/* Main banner section styles */
 .main-banner-section {
     background-color: var(--pine-tree-color);
     padding: 30px;
     border-radius: 10px;
 }
 
+/* Section container styles */
 .section-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* Banner text styles */
 .banner-main-text {
     font-size: 30px;
     color: var(--dandelion-color);
@@ -172,6 +165,7 @@ p {
     margin-bottom: 20px;
 }
 
+/* Banner buttons styles */
 .banner-buttons {
     display: flex;
     align-items: center;
@@ -196,14 +190,17 @@ p {
     transform: scale(1.05);
 }
 
+/* GitHub button styles */
 .github {
     background: linear-gradient(145deg, #000, #ffe066);
 }
 
+/* Resume button styles */
 .resume {
     background: linear-gradient(145deg, #70c1b3, #000);
 }
 
+/* Banner images styles */
 .banner-images {
     height: 400px;
     width: 400px;
@@ -225,6 +222,7 @@ p {
     transition: transform 0.3s ease;
 }
 
+/* Banner icons styles */
 .banner-icons {
     margin: 20px 0;
     display: flex;
@@ -256,6 +254,7 @@ p {
     transform: rotateY(360deg);
 }
 
+/* Banner experience styles */
 .banner-experience {
     margin: 40px 0;
     display: flex;
@@ -263,6 +262,7 @@ p {
     align-items: center;
 }
 
+/* Experience content styles */
 .experience-content {
     text-align: center;
 }
@@ -286,6 +286,7 @@ p {
     margin-left: 8px;
 }
 
+/* Main about me section styles */
 .main-aboutme {
     margin: 20px;
 }
@@ -293,7 +294,6 @@ p {
 .aboutme-container {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
     gap: 20px;
 }
 
@@ -375,6 +375,7 @@ p {
     width: 35px;
 }
 
+/* About me section header styles */
 .main-aboutme-header {
     font-size: 40px;
     text-align: center;
@@ -386,7 +387,8 @@ p {
     width: 50px;
 }
 
-.main-aboutme-desc{
+/* About me section description styles */
+.main-aboutme-desc {
     font-size: 16px;
     color: var(--platinum-color);
     text-align: center;
