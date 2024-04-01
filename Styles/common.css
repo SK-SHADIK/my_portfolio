@@ -286,10 +286,12 @@ p {
     margin-left: 8px;
 }
 
-/* Main about me section styles */
-.main-aboutme {
+.main-aboutme,
+.main-skills {
     margin: 20px;
 }
+
+/* Main about me section styles */
 
 .aboutme-container {
     display: flex;
@@ -375,20 +377,23 @@ p {
     width: 35px;
 }
 
-/* About me section header styles */
-.main-aboutme-header {
+/* About me, skills section header styles */
+.main-aboutme-header,
+.main-skills-header {
     font-size: 40px;
     text-align: center;
     font-weight: 700;
 }
 
-.main-aboutme-img {
+.main-aboutme-img,
+.main-skills-img {
     height: 50px;
     width: 50px;
 }
 
-/* About me section description styles */
-.main-aboutme-desc {
+/* About me, skills section description styles */
+.main-aboutme-desc,
+.main-skills-desc {
     font-size: 16px;
     color: var(--platinum-color);
     text-align: center;
