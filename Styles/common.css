@@ -287,7 +287,8 @@ p {
 }
 
 .main-aboutme,
-.main-skills {
+.main-skills,
+.main-contact {
     margin: 20px;
 }
 
@@ -379,21 +380,24 @@ p {
 
 /* About me, skills section header styles */
 .main-aboutme-header,
-.main-skills-header {
+.main-skills-header,
+.main-contact-header {
     font-size: 40px;
     text-align: center;
     font-weight: 700;
 }
 
 .main-aboutme-img,
-.main-skills-img {
+.main-skills-img,
+.main-contact-img {
     height: 50px;
     width: 50px;
 }
 
 /* About me, skills section description styles */
 .main-aboutme-desc,
-.main-skills-desc {
+.main-skills-desc,
+.main-contact-desc {
     font-size: 16px;
     color: var(--platinum-color);
     text-align: center;
