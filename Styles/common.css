@@ -183,7 +183,7 @@ p {
 .banner-button {
     margin: 20px 0;
     font-size: 18px;
-    color: var(--white-color);
+    color: var(--pine-tree-color);
     padding: 10px;
     border-radius: 8px;
     transition: transform 0.3s ease;
