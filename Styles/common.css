@@ -291,7 +291,8 @@ p {
 
 .main-aboutme,
 .main-skills,
-.main-contact {
+.main-contact,
+.main-service {
     margin: 20px;
 }
 
@@ -384,7 +385,8 @@ p {
 /* About me, skills section header styles */
 .main-aboutme-header,
 .main-skills-header,
-.main-contact-header {
+.main-contact-header,
+.main-service-header {
     font-size: 40px;
     text-align: center;
     font-weight: 700;
@@ -392,7 +394,8 @@ p {
 
 .main-aboutme-img,
 .main-skills-img,
-.main-contact-img {
+.main-contact-img,
+.main-service-img {
     height: 50px;
     width: 50px;
 }
@@ -400,7 +403,8 @@ p {
 /* About me, skills section description styles */
 .main-aboutme-desc,
 .main-skills-desc,
-.main-contact-desc {
+.main-contact-desc,
+.main-service-desc {
     font-size: 16px;
     color: var(--platinum-color);
     text-align: center;
@@ -575,4 +579,42 @@ p {
     font-size: 18px;
     color: var(--chinese-silver-color);
     text-align: center;
+}
+
+.service-container {
+    margin: 20px 0;
+}
+
+.service-content {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--lapis-lazuli-color);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-content:hover {
+    background-color: var(--lapis-lazuli-color);
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white-color);
+    margin: 20px 0;
+}
+
+.service-text {
+    font-size: 17px;
+    color: var(--chinese-silver-color);
+}
+
+.service-img {
+    height: 80px;
+    width: 80px;
 }
