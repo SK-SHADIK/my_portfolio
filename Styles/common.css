@@ -622,3 +622,55 @@ p {
     height: 80px;
     width: 80px;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--pine-tree-color);
+}
+
+.modal-content {
+    background-color: var(--dark-liver-color);
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    color: var(--chinese-silver-color);
+    float: right;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-input {
+    width: 98%;
+}
+
+.hire-me-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hire-me-text {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--white-color);
+}

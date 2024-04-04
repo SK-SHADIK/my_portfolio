@@ -15,3 +15,42 @@ function toggleHeaderBackground() {
 
 // Event listener for scroll event to trigger toggleHeaderBackground function
 window.addEventListener('scroll', toggleHeaderBackground);
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btns = document.querySelectorAll(".hire-me");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btns.forEach(function (btn) {
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+});
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Form submission
+document.getElementById("hireForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+    // Handle form submission here, e.g., send form data to server
+    // You can use AJAX or other techniques for this purpose
+    console.log("Form submitted!");
+    // Close the modal after form submission
+    modal.style.display = "none";
+});
