@@ -533,7 +533,7 @@ p {
 }
 
 .button-save {
-    background-color: var(--green-sheen-color);
+    background: linear-gradient(145deg, #f25f5c, #000);
     color: var(--white-color);
     padding: 10px 20px;
     border: none;
@@ -541,11 +541,10 @@ p {
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .button-save:hover {
-    background-color: var(--green-sheen-color);
     transform: scale(1.1);
 }
 
@@ -636,7 +635,7 @@ p {
 }
 
 .modal-content {
-    background-color: var(--dark-liver-color);
+    background-color: var(--lapis-lazuli-color);
     margin: 10% auto;
     padding: 20px;
     width: 90%;
