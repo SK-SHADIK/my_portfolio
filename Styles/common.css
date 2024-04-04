@@ -292,7 +292,8 @@ p {
 .main-aboutme,
 .main-skills,
 .main-contact,
-.main-service {
+.main-service,
+.main-projects {
     margin: 20px;
 }
 
@@ -386,7 +387,8 @@ p {
 .main-aboutme-header,
 .main-skills-header,
 .main-contact-header,
-.main-service-header {
+.main-service-header,
+.main-project-header {
     font-size: 40px;
     text-align: center;
     font-weight: 700;
@@ -395,7 +397,8 @@ p {
 .main-aboutme-img,
 .main-skills-img,
 .main-contact-img,
-.main-service-img {
+.main-service-img,
+.main-project-img {
     height: 50px;
     width: 50px;
 }
@@ -404,7 +407,8 @@ p {
 .main-aboutme-desc,
 .main-skills-desc,
 .main-contact-desc,
-.main-service-desc {
+.main-service-desc,
+.main-project-desc {
     font-size: 16px;
     color: var(--platinum-color);
     text-align: center;
