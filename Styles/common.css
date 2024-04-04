@@ -459,11 +459,15 @@ p {
     justify-content: space-around;
     align-items: center;
     gap: 20px;
+    background-color: var(--pine-tree-color);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.contact-content{
+.contact-content {
     width: 100%;
 }
+
 .contact-info-box {
     margin: 15px 0;
 }
@@ -472,6 +476,10 @@ p {
     color: var(--white-color);
     font-size: 18px;
     text-decoration: none;
+}
+
+.contact-info-text:hover {
+    text-decoration: underline;
 }
 
 .contact-icon {
@@ -486,7 +494,7 @@ p {
 }
 
 .contact-form {
-    width: 100%;
+    width: 90%;
 }
 
 .form-input-box {
@@ -523,6 +531,6 @@ p {
     transform: scale(1.1);
 }
 
-.contact-textarea{
+.contact-textarea {
     height: 120px;
 }
