@@ -534,3 +534,31 @@ p {
 .contact-textarea {
     height: 120px;
 }
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--pine-tree-color);
+}
+.footer-container{
+    padding-top: 60px;
+}
+.footer-logo{
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.footer-content{
+    width: 60%;
+    margin: 0 auto;
+}
+.footer-bottom-text{
+    padding: 30px 0 10px 0;
+    font-size: 18px;
+    color: var(--chinese-silver-color);
+    text-align: center;
+}
