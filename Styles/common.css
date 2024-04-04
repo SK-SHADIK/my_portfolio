@@ -450,3 +450,23 @@ p {
 .skill-header {
     text-align: center;
 }
+
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info-box{
+    margin: 20px 0;
+}
+.contact-info-text{
+    color: var(--white-color);
+    font-size: 18px;
+}
+
+.contact-icon{
+    height: 20px;
+    width: 20px;
+}
