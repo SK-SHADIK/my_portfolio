@@ -841,63 +841,127 @@ p {
 }
 
 @media screen and (max-width: 1480px) {
-    .project-container{
+    .project-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .aboutme-container {
+        gap: 10px;
+    }
+
+    .aboutme-academic {
+        width: 50%;
+    }
 }
+
 @media screen and (max-width: 980px) {
-    .project-container{
+    .project-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .project-filter-content {
         width: 100%;
     }
-}
-@media screen and (max-width: 880px) {
-    .header{
-        height: 60px;
-    }
-    .main-section{
-        margin-top: 90px;
-    }
-    .header-container{
-        flex-direction: column;
-    }
-    .section-container{
+
+    .aboutme-container {
         flex-direction: column-reverse;
     }
-    .banner-experience{
+
+    .aboutme-academic {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .header {
+        height: 60px;
+    }
+
+    .main-section {
+        margin-top: 90px;
+    }
+
+    .header-container {
         flex-direction: column;
     }
+
+    .section-container {
+        flex-direction: column-reverse;
+    }
+
+    .banner-experience {
+        flex-direction: column;
+    }
+
     .banner-main-text,
-    .banner-sub-text{
+    .banner-sub-text {
         text-align: center;
     }
-    
+
 }
+
+@media screen and (max-width: 580px) {
+    .aboutme-content-header {
+        font-size: 14px;
+    }
+
+    .aboutme-content-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .aboutme-year,
+    .aboutme-degree,
+    .aboutme-text,
+    .aboutme-address {
+        font-size: 12px;
+    }
+
+    .aboutme-year,
+    .aboutme-degree,
+    .aboutme-address {
+        font-size: 10px;
+    }
+    .calendar-icon{
+        height: 8px;
+        width: 8px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .header-a {
         margin: 0 2px;
         font-size: 8px;
         padding: 5px;
     }
-    .main-banner-section{
+
+    .main-banner-section {
         padding: 10px;
     }
-    .banner-buttons{
+
+    .banner-buttons {
         flex-direction: column-reverse;
         gap: 10px;
     }
-    .banner-images{
+
+    .banner-images {
         width: 100%;
         height: 300px;
     }
-    .project-filter-content{
+
+    .project-filter-content {
         height: 450px;
     }
-    .service-content{
+
+    .service-content {
         width: 100%;
         height: 350px;
     }
-    
+    .aboutme-content{
+        flex-direction: column;
+    }
+    .aboutme-content{
+        margin: 2px;
+    }
+
 }
