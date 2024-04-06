@@ -94,7 +94,36 @@
                         class="main-project-img">
                     My Projects</h3>
                 <!-- Project description -->
-                <p class="main-service-desc">Here are the services I offer</p>
+                <p class="main-service-desc">Here are the project I did</p>
+                
+                <div id="project-btns">
+                    <button class="project-btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="project-btn" onclick="filterSelection('cars')"> Cars</button>
+                    <button class="project-btn" onclick="filterSelection('animals')"> Animals</button>
+                    <button class="project-btn" onclick="filterSelection('fruits')"> Fruits</button>
+                    <button class="project-btn" onclick="filterSelection('colors')"> Colors</button>
+                  </div>
+                  
+                  <div class="project-container">
+                    <div class="project-filter-content cars">
+                        <div class="project-box">
+                            <h3 class="project-box-title">API PROJECT WITH REACT & LARAVEL</h3>
+                            <p class="project-box-desc">We collaborated on the project "<strong>Goods Buying Selling</strong>" with four contributors. Using Laravel for the backend and React for the frontend, we integrated API for communication between the two. The project serves Admin, Employee, Buyer, and Seller user categories. My primary contribution was developing the admin system code.</p>
+                        </div>
+                    </div>
+                    <div class="project-filter-content colors fruits">Orange</div>
+                    <div class="project-filter-content cars">Volvo</div>
+                    <div class="project-filter-content colors">Red</div>
+                    <div class="project-filter-content cars">Ford</div>
+                    <div class="project-filter-content colors">Blue</div>
+                    <div class="project-filter-content animals">Cat</div>
+                    <div class="project-filter-content animals">Dog</div>
+                    <div class="project-filter-content fruits">Melon</div>
+                    <div class="project-filter-content fruits animals">Kiwi</div>
+                    <div class="project-filter-content fruits">Banana</div>
+                    <div class="project-filter-content fruits">Lemon</div>
+                    <div class="project-filter-content animals">Cow</div>
+                  </div>
 
             </div>
             <!-- Main Service section -->
@@ -415,7 +444,7 @@
                         <input class="contact-input-field modal-input" type="email" name="email"
                             placeholder="Enter Your Email">
                     </div>
-                    
+
                     <div class="form-input-box">
                         <textarea class="contact-input-field contact-textarea modal-input" name="message"
                             placeholder="Enter Message Here (If any)..."></textarea>

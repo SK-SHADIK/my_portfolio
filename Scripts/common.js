@@ -54,3 +54,38 @@ document.getElementById("hireForm").addEventListener("submit", function (event) 
     // Close the modal after form submission
     modal.style.display = "none";
 });
+
+
+function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("project-filter-content");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      var classNames = x[i].className.split(" ");
+      var index = classNames.indexOf("show");
+      if (c === "" || classNames.indexOf(c) > -1) {
+        if (index === -1) {
+          x[i].className += " show";
+        }
+      } else {
+        if (index > -1) {
+          classNames.splice(index, 1);
+          x[i].className = classNames.join(" ");
+        }
+      }
+    }
+    
+    // Add active class to the clicked button
+    var btns = document.getElementsByClassName("project-btn");
+    for (var i = 0; i < btns.length; i++) {
+      if (btns[i].classList.contains("active")) {
+        btns[i].classList.remove("active");
+      }
+    }
+    event.currentTarget.classList.add("active");
+  }
+  
+  // Call filterSelection function with 'all' parameter when the page loads
+  window.onload = function() {
+    filterSelection('all');
+  };

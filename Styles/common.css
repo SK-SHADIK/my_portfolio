@@ -673,3 +673,41 @@ p {
     margin: 20px 0;
     color: var(--white-color);
 }
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+}
+.project-filter-content {
+    background-color: var(--pine-tree-color);
+    color: var(--white-color);
+    line-height: 100px;
+    margin: 2px;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .project-container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  /* Style the buttons */
+  .project-btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .project-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .project-btn.active {
+    background-color: #666;
+    color: white;
+  }
