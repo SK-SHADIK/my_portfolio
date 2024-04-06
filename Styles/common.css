@@ -839,3 +839,16 @@ p {
     width: 30px;
     height: 30px;
 }
+
+@media screen and (max-width: 880px) {
+    .header-container{
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 880px) {
+    .header-a {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
