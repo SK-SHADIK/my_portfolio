@@ -626,7 +626,7 @@ p {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
@@ -875,7 +875,8 @@ p {
         margin: 0 auto;
         width: 100%;
     }
-    .footer-content{
+
+    .footer-content {
         width: 100%;
     }
 }
@@ -906,6 +907,23 @@ p {
         text-align: center;
     }
 
+    .main-aboutme-header,
+    .main-skills-header,
+    .main-contact-header,
+    .main-service-header,
+    .main-project-header {
+        font-size: 22px;
+    }
+
+    .main-aboutme-img,
+    .main-skills-img,
+    .main-contact-img,
+    .main-service-img,
+    .main-project-img {
+        height: 30px;
+        width: 30px;
+    }
+
 }
 
 @media screen and (max-width: 680px) {
@@ -914,10 +932,12 @@ p {
         font-size: 10px;
         padding: 5px;
     }
-    .contact-container{
+
+    .contact-container {
         flex-direction: column;
     }
-    .footer-bottom-text{
+
+    .footer-bottom-text {
         font-size: 12px;
     }
 }
@@ -958,6 +978,14 @@ p {
     .main-projects {
         margin: 5px;
     }
+
+    .hire-me-title {
+        font-size: 20px;
+    }
+
+    .hire-me-text {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -997,10 +1025,12 @@ p {
     .aboutme-content {
         margin: 2px;
     }
-    .contact-info-text{
+
+    .contact-info-text {
         font-size: 14px;
     }
-    .footer-bottom-text{
+
+    .footer-bottom-text {
         font-size: 8px;
     }
 
