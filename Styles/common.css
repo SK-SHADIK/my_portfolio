@@ -924,6 +924,14 @@ p {
         width: 30px;
     }
 
+    .main-aboutme-desc,
+    .main-skills-desc,
+    .main-contact-desc,
+    .main-service-desc,
+    .main-project-desc {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 680px) {
