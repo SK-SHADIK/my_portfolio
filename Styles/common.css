@@ -856,6 +856,10 @@ p {
     .banner-experience{
         flex-direction: column;
     }
+    .banner-main-text,
+    .banner-sub-text{
+        text-align: center;
+    }
     
 }
 @media screen and (max-width: 480px) {
