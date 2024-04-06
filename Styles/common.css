@@ -875,6 +875,9 @@ p {
         margin: 0 auto;
         width: 100%;
     }
+    .footer-content{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 880px) {
@@ -913,6 +916,9 @@ p {
     }
     .contact-container{
         flex-direction: column;
+    }
+    .footer-bottom-text{
+        font-size: 12px;
     }
 }
 
@@ -993,6 +999,9 @@ p {
     }
     .contact-info-text{
         font-size: 14px;
+    }
+    .footer-bottom-text{
+        font-size: 8px;
     }
 
 }
