@@ -61,31 +61,41 @@ function filterSelection(c) {
     x = document.getElementsByClassName("project-filter-content");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
-      let classNames = x[i].className.split(" ");
-      let index = classNames.indexOf("show");
-      if (c === "" || classNames.indexOf(c) > -1) {
-        if (index === -1) {
-          x[i].className += " show";
+        let classNames = x[i].className.split(" ");
+        let index = classNames.indexOf("show");
+        if (c === "" || classNames.indexOf(c) > -1) {
+            if (index === -1) {
+                x[i].className += " show";
+            }
+        } else {
+            if (index > -1) {
+                classNames.splice(index, 1);
+                x[i].className = classNames.join(" ");
+            }
         }
-      } else {
-        if (index > -1) {
-          classNames.splice(index, 1);
-          x[i].className = classNames.join(" ");
-        }
-      }
     }
-    
+
     // Add active class to the clicked button
     let btns = document.getElementsByClassName("project-btn");
     for (let i = 0; i < btns.length; i++) {
-      if (btns[i].classList.contains("active")) {
-        btns[i].classList.remove("active");
-      }
+        if (btns[i].classList.contains("active")) {
+            btns[i].classList.remove("active");
+        }
     }
     event.currentTarget.classList.add("active");
-  }
-  
-  // Call filterSelection function with 'all' parameter when the page loads
-  window.onload = function() {
+}
+
+// Call filterSelection function with 'all' parameter when the page loads
+window.onload = function () {
     filterSelection('all');
-  };
+};
+
+//SCROLL POSITION
+window.onscroll = function () { myFunction() };
+
+function myFunction() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
