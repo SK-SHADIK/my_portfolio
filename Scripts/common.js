@@ -18,13 +18,13 @@ window.addEventListener('scroll', toggleHeaderBackground);
 
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btns = document.querySelectorAll(".hire-me");
+let btns = document.querySelectorAll(".hire-me");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btns.forEach(function (btn) {
@@ -57,12 +57,12 @@ document.getElementById("hireForm").addEventListener("submit", function (event) 
 
 
 function filterSelection(c) {
-    var x, i;
+    let x, i;
     x = document.getElementsByClassName("project-filter-content");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
-      var classNames = x[i].className.split(" ");
-      var index = classNames.indexOf("show");
+      let classNames = x[i].className.split(" ");
+      let index = classNames.indexOf("show");
       if (c === "" || classNames.indexOf(c) > -1) {
         if (index === -1) {
           x[i].className += " show";
@@ -76,8 +76,8 @@ function filterSelection(c) {
     }
     
     // Add active class to the clicked button
-    var btns = document.getElementsByClassName("project-btn");
-    for (var i = 0; i < btns.length; i++) {
+    let btns = document.getElementsByClassName("project-btn");
+    for (let i = 0; i < btns.length; i++) {
       if (btns[i].classList.contains("active")) {
         btns[i].classList.remove("active");
       }
