@@ -870,6 +870,11 @@ p {
     .aboutme-academic {
         width: 100%;
     }
+
+    .skill-container {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 880px) {
@@ -900,7 +905,16 @@ p {
 
 }
 
+@media screen and (max-width: 680px) {
+    .header-a {
+        margin: 0 2px;
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
 @media screen and (max-width: 580px) {
+
     .aboutme-content-header {
         font-size: 14px;
     }
@@ -922,9 +936,18 @@ p {
     .aboutme-address {
         font-size: 10px;
     }
-    .calendar-icon{
+
+    .calendar-icon {
         height: 8px;
         width: 8px;
+    }
+
+    .main-aboutme,
+    .main-skills,
+    .main-contact,
+    .main-service,
+    .main-projects {
+        margin: 5px;
     }
 }
 
@@ -957,10 +980,12 @@ p {
         width: 100%;
         height: 350px;
     }
-    .aboutme-content{
+
+    .aboutme-content {
         flex-direction: column;
     }
-    .aboutme-content{
+
+    .aboutme-content {
         margin: 2px;
     }
 
