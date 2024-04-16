@@ -2,7 +2,7 @@ setTimeout(function() {
     // Hide the loader
     document.querySelector('.loader-wrapper').style.display = 'none';
   }, 3000); 
-  
+
 // Selecting the header element
 let header = document.querySelector('.header');
 
