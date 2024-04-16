@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hire Me</title>
+        <!-- Favicon for the webpage -->
+        <link rel="shortcut icon" type="image/png" href="Images/ME.jpg">
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #141C0C;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .page-content {
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #2a381cf3;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #0000001a;
+            }
+
+            .hire-me-title {
+                text-align: center;
+                color: #fff;
+            }
+
+            .hire-me-text {
+                text-align: center;
+                color: #e6e5e5;
+                margin-top: 10px;
+            }
+
+            .form-input-box {
+                margin-bottom: 20px;
+            }
+
+            .contact-input-field,
+            .contact-textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #2a381cf3;
+                border-radius: 5px;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+
+            .contact-textarea {
+                height: 100px;
+            }
+
+
+            .button-save,
+            .back-button {
+                background: linear-gradient(145deg, #ffe066, #000);
+                color: var(--white-color);
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 700;
+                color: #fff;
+                transition: transform 0.3s ease;
+            }
+
+            .back-button {
+                background: linear-gradient(145deg, #f25f5c, #000) !important;
+                text-decoration: none;
+            }
+
+            .button-save:hover,
+            .back-button:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="page-content">
+            <a href="index.html" class="back-button">Back To Home</a>
+            <h2 class="hire-me-title">Hire Me</h2>
+            <p class="hire-me-text">To inquire, kindly submit the form below</p>
+            <form id="hireForm" class="hire_me">
+                <div class="form-input-box">
+                    <input type="hidden" name="dateTime" id="dateTime" value="">
+                    <input class="contact-input-field" type="text" name="hire_name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-input-box">
+                    <input class="contact-input-field" type="text" name="hire_email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="form-input-box">
+                    <textarea class="contact-input-field contact-textarea" name="hire_msg"
+                        placeholder="Enter Message Here (If any)..."></textarea>
+                </div>
+                <button type="submit" id="hire_submit" class="button-save">Hire</button>
+            </form>
+        </div>
+        <script>
+
+            // Contact Form Works
+
+            let form = document.querySelector(".hire_me");
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Validate name and email fields
+                let nameInput = form.querySelector('input[name="hire_name"]');
+                let emailInput = form.querySelector('input[name="hire_email"]');
+                let name = nameInput.value.trim();
+                let email = emailInput.value.trim();
+                let isValid = true;
+
+                // Check if name is empty
+                if (name === '') {
+                    showError(nameInput, 'Please enter your name.');
+                    isValid = false;
+                } else {
+                    hideError(nameInput);
+                }
+
+                // Check if email is empty and has valid format
+                if (email === '') {
+                    showError(emailInput, 'Please enter your email address.');
+                    isValid = false;
+                } else if (!isValidEmail(email)) {
+                    showError(emailInput, 'Please enter a valid email address.');
+                    isValid = false;
+                } else {
+                    hideError(emailInput);
+                }
+
+                // If form is valid, submit
+                if (isValid) {
+                    document.querySelector("#hire_submit").value = "Submitting..";
+                    // Show loading indicator
+                    let loadingIndicator = document.createElement("div");
+                    loadingIndicator.textContent = "Please wait while your message is being processed. Thank you for your patience!";
+                    loadingIndicator.style.color = "#ffe066"; // Yellow color
+                    loadingIndicator.style.fontSize = "18px"; // Font size 18
+                    loadingIndicator.style.fontWeight = "700"; // Font weight 700
+                    loadingIndicator.classList.add("loading-indicator");
+                    form.insertAdjacentElement("beforebegin", loadingIndicator);
+
+                    // Set current date and time to the hidden input field
+                    let now = new Date();
+                    let dateTimeField = document.getElementById("dateTime");
+                    dateTimeField.value = now.toLocaleString(); // You can customize the format here if needed
+
+                    let data = new FormData(form);
+                    fetch('https://script.google.com/macros/s/AKfycbx-VEyIOb4Qm6Wds8FLGpnZ-I5dKSAI7iUuUtAs-CT_5mtkHd71wMVkPDGrxCua9oC_Fg/exec', {
+                        method: "POST",
+                        body: data
+                    })
+                        .then(res => res.text())
+                        .then(data => {
+                            document.querySelector("#hire_submit").value = "Submit";
+                            // Remove loading indicator
+                            loadingIndicator.remove();
+                            // Display submission message
+                            let messageContainer = document.createElement("div");
+                            messageContainer.textContent = "Your message has been successfully submitted. I will be in touch with you soon. Thank you!";
+                            messageContainer.classList.add("submission-message");
+                            messageContainer.style.color = "#ffe066"; // Yellow color
+                            messageContainer.style.fontSize = "18px"; // Font size 18
+                            messageContainer.style.fontWeight = "700"; // Font weight 700
+                            form.insertAdjacentElement("beforebegin", messageContainer);
+                            window.location.href = "index.html";
+                            // Clear form fields after successful submission
+                            form.reset();
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            // Remove loading indicator in case of an error
+                            loadingIndicator.remove();
+                        });
+                }
+            });
+
+            // Function to validate email format
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            // Function to show error message
+            function showError(input, message) {
+                let errorElement = document.createElement("div");
+                errorElement.textContent = message;
+                errorElement.classList.add("error-message");
+                errorElement.style.color = "#f25f5c"; // Red color
+                errorElement.style.fontSize = "14px"; // Font size 18
+                errorElement.style.fontWeight = "700"; // Font weight 700
+                input.parentNode.appendChild(errorElement);
+            }
+
+            // Function to hide error message
+            function hideError(input) {
+                let errorElement = input.parentNode.querySelector(".error-message");
+                if (errorElement) {
+                    errorElement.remove();
+                }
+            }
+        </script>
+    </body>
+
+</html>
