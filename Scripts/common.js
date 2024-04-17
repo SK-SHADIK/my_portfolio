@@ -1,7 +1,7 @@
+// Hide the loader after 3 seconds (3000 milliseconds)
 setTimeout(function() {
-    // Hide the loader
     document.querySelector('.loader-wrapper').style.display = 'none';
-  }, 3000); 
+}, 3000);
 
 // Selecting the header element
 let header = document.querySelector('.header');
@@ -20,46 +20,6 @@ function toggleHeaderBackground() {
 
 // Event listener for scroll event to trigger toggleHeaderBackground function
 window.addEventListener('scroll', toggleHeaderBackground);
-
-
-// Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-let btns = document.querySelectorAll(".hire-me");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btns.forEach(function (btn) {
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-});
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Form submission
-document.getElementById("hireForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
-    // Handle form submission here, e.g., send form data to server
-    // You can use AJAX or other techniques for this purpose
-    console.log("Form submitted!");
-    // Close the modal after form submission
-    modal.style.display = "none";
-});
-
 
 function filterSelection(c) {
     let x, i;
@@ -108,7 +68,7 @@ function myFunction() {
 
 // Contact Form Works
 
-let form = document.querySelector(".contact-form");
+let form = document.querySelector(".contact_form");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -173,6 +133,7 @@ form.addEventListener('submit', (e) => {
                 messageContainer.style.fontSize = "18px"; // Font size 18
                 messageContainer.style.fontWeight = "700"; // Font weight 700
                 form.insertAdjacentElement("beforebegin", messageContainer);
+                window.location.href = "index.html";
                 // Clear form fields after successful submission
                 form.reset();
             })
